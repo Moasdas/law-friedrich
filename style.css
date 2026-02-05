@@ -1,8 +1,6 @@
 :root {
-    /* NEUE FARBEN */
-    /* Ein sehr helles, cremiges Off-White */
+    /* COLORS: Off-White & British Racing Green */
     --bg-color: #f8f8f4;
-    /* Ein tiefes, klassisches British Racing Green */
     --text-color: #004225; 
 
     --font-serif: "Times New Roman", Times, Baskerville, Georgia, serif;
@@ -25,7 +23,7 @@ body {
     overflow: hidden;
 }
 
-/* Zentrale Bühne & Branding */
+/* Zentrale Bühne */
 .center-stage {
     flex-grow: 1;
     display: flex;
@@ -40,7 +38,7 @@ body {
 
 h1 {
     font-family: var(--font-serif);
-    font-size: clamp(36px, 6vw, 72px); /* Leicht angepasst für bessere Balance */
+    font-size: clamp(36px, 6vw, 72px);
     font-weight: 400;
     letter-spacing: 0.5px;
     color: var(--text-color);
@@ -49,11 +47,11 @@ h1 {
 
 .slogan {
     font-family: var(--font-sans);
-    font-size: clamp(12px, 2vw, 14px); /* Skaliert auch leicht */
+    font-size: clamp(12px, 2vw, 14px);
     text-transform: uppercase;
-    letter-spacing: 2px; /* Breite Sperrung für Eleganz */
+    letter-spacing: 2px;
     color: var(--text-color);
-    opacity: 0.8; /* Ganz leicht transparenter als die Headline */
+    opacity: 0.8;
 }
 
 /* Footer */
@@ -73,39 +71,50 @@ footer a {
     transition: opacity 0.3s;
 }
 
-footer a:hover {
-    opacity: 0.6;
-}
+footer a:hover { opacity: 0.6; }
 
-.separator {
-    margin: 0 8px;
-    opacity: 0.4;
-}
+.separator { margin: 0 8px; opacity: 0.4; }
 
-/* Cookie Banner (Farben invertiert: Grün auf Off-White) */
+/* COOKIE BANNER (Updated Layout) */
 #cookie-banner {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: var(--text-color); /* Grüner Hintergrund */
-    color: var(--bg-color);       /* Off-White Text */
-    padding: 10px 18px;
-    font-size: 10px;
-    z-index: 100;
+    width: 300px; /* Feste Breite für eine saubere Box */
+    background: var(--text-color); /* Grün */
+    color: var(--bg-color);       /* Off-White */
+    padding: 20px;
+    font-size: 11px;
+    line-height: 1.4;
+    z-index: 1000;
     display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cookie-buttons {
+    display: flex;
+    justify-content: space-between; /* Buttons verteilen */
     align-items: center;
-    gap: 12px;
+}
+
+#cookie-banner a {
+    color: var(--bg-color);
+    text-decoration: underline;
+    opacity: 0.8;
 }
 
 #cookie-banner button {
-    background: transparent;
-    border: 1px solid var(--bg-color); /* Off-White Rahmen */
-    color: var(--bg-color);
-    padding: 3px 8px;
+    background: var(--bg-color); /* Off-White Button */
+    color: var(--text-color);    /* Grüner Text */
+    border: none;
+    padding: 6px 12px;
     cursor: pointer;
-    font-size: 9px;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-weight: bold;
 }
 
 /* Mobile Optimierung */
@@ -116,8 +125,9 @@ footer a:hover {
     }
     
     #cookie-banner {
-        right: 0; left: 0; bottom: 0;
-        justify-content: space-between;
-        padding: 15px 20px;
+        width: auto;
+        left: 20px; /* Auf Mobile Links und Rechts Abstand */
+        right: 20px; 
+        bottom: 20px;
     }
 }
