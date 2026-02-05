@@ -1,70 +1,42 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanzlei Friedrich | Counsel</title>
+    <title>Friedrich Partners</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
-    <div id="cookie-banner" class="cookie-banner">
-        <p>Diese Website verwendet Cookies von Google. <button onclick="acceptCookies()">Einverstanden</button></p>
+    <div id="cookie-banner">
+        <span>This site uses Google Cookies.</span>
+        <button onclick="acceptCookies()">OK</button>
     </div>
 
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">KANZLEI FRIEDRICH</a>
-            <div class="nav-links">
-                <a href="#expertise">Expertise</a>
-                <a href="#kontakt">Contact</a>
-            </div>
+    <main class="center-stage">
+        <div class="brand-container">
+            <h1>Friedrich Partners</h1>
+            <p class="slogan">Counsel on what matters.</p>
         </div>
-    </nav>
-
-    <main>
-        <section class="hero">
-            <h1>COUNSEL TO FOUNDERS<br>AND COMPANIES.</h1>
-        </section>
-
-        <section id="expertise" class="section">
-            <span class="section-label">01 / Expertise</span>
-            <div class="content-grid">
-                <div class="grid-item">
-                    <h3>Wirtschaftsrecht</h3>
-                    <p>Strategische Beratung für die nächste Generation von Gründern und Unternehmen.</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Privatmandate</h3>
-                    <p>Diskretion und rechtliche Präzision auf höchstem Niveau für individuelle Anliegen.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="kontakt" class="section">
-            <span class="section-label">02 / Contact</span>
-            <div class="contact-box">
-                <p>Kanzlei Friedrich<br>Weserstraße 94<br>28757 Bremen</p>
-                <p><a href="mailto:info@ra-friedrich.com">info@ra-friedrich.com</a></p>
-            </div>
-        </section>
     </main>
 
     <footer>
-        <div class="footer-container">
-            <span class="copyright">© Kanzlei Friedrich 2026</span>
-            <div class="footer-nav">
-                <a href="impressum.html">Imprint</a>
-                <a href="datenschutz.html">Privacy Policy</a>
-            </div>
-        </div>
+        <p>
+            &copy; Kanzlei Friedrich 2026 
+            <span class="separator">&middot;</span> 
+            <a href="impressum.html">Imprint</a> 
+            <span class="separator">&middot;</span> 
+            <a href="datenschutz.html">Privacy Policy</a> 
+            <span class="separator">&middot;</span> 
+            <a href="mailto:info@ra-friedrich.com">Contact</a>
+        </p>
     </footer>
 
     <script>
         function acceptCookies() {
             document.getElementById('cookie-banner').style.display = 'none';
-            // Hier Google Analytics Code einfügen, falls vorhanden
+            // Insert Google Analytics code here
         }
     </script>
 </body>
