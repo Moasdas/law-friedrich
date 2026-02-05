@@ -36,6 +36,19 @@ body {
     text-align: center;
 }
 
+.brand-logo {
+    width: 80px;        /* Größe des Logos - bei Bedarf anpassen (z.B. 60px oder 100px) */
+    height: auto;       /* Verhältnis beibehalten */
+    margin-bottom: 25px; /* Abstand zum Text "Friedrich Partners" */
+    display: block;
+    margin-left: auto;   /* Zentrierung erzwingen */
+    margin-right: auto;
+    
+    /* Trick: Falls der Hintergrund des Bildes nicht exakt zur Website passt, 
+       blendet dies den weißen Hintergrund des Bildes sanft aus: */
+    mix-blend-mode: multiply; 
+}
+
 h1 {
     font-family: var(--font-serif);
     font-size: clamp(36px, 6vw, 72px);
