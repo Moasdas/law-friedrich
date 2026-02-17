@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friedrich Partners</title>
+    <meta name="description" content="Friedrich Partners. Legal counsel on what matters.">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -34,14 +35,25 @@
             <span class="separator">&middot;</span> 
             <a href="datenschutz.html">Privacy Policy</a> 
             <span class="separator">&middot;</span> 
-            <a href="mailto:info@friedrich-law.com">Contact</a>
+            <a href="#" onclick="openMail(event)">Contact</a>
         </p>
     </footer>
 
     <script>
+        function openMail(event) {
+            event.preventDefault(); 
+            
+            // Hier wird info@friedrich-law.com sicher zusammengesetzt
+            var user = "info";
+            var domain = "friedrich-law"; 
+            var tld = "com";
+            
+            var email = user + "@" + domain + "." + tld;
+            window.location.href = "mailto:" + email;
+        }
+
         function acceptCookies() {
             document.getElementById('cookie-banner').style.display = 'none';
-            // Insert Google Analytics code here
         }
     </script>
 </body>
